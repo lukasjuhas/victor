@@ -3,6 +3,7 @@
 node_modules
 build
 dest
+dist
 *.node
 *.orig
 .idea
