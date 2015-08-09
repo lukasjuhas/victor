@@ -1,6 +1,7 @@
 {
   "name": "victor",
   "version": "0.0.1",
+  "private": true,
   "dependencies": {
     "browser-sync": "^2.8.1",
     "react": "^0.13.3"
