@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "browser-sync": "^2.8.1",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "connect-history-api-fallback": "0.0.5",
+    "wiredep": "^2.2.2"
   },
   "devDependencies": {
     "bower": "^1.4.1",
