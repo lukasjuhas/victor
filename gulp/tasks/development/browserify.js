@@ -4,6 +4,8 @@ var config = require('../../config').browserify;
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
 var watchify = require('watchify');
+var babelify = require('babelify');
+var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 
 gulp.task('browserify', function() {
@@ -13,6 +15,7 @@ gulp.task('browserify', function() {
     packageCache: {},
     fullPaths: true,
     debug: true,
+    transform: [babelify, reactify],
   });
 
   b = watchify(b);
@@ -37,7 +40,6 @@ function bundleShare(b) {
 gulp.task('browserifyForProduct', function() {
   return browserify('./src/js/main.js')
     .bundle()
-    .pipe(babel())
     .pipe(source('main.js'))
     .pipe(gulp.dest(config.dest));
 });
